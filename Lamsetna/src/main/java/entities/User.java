@@ -4,7 +4,9 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
-
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 /**
  * The persistent class for the users database table.
@@ -121,7 +123,15 @@ public class User implements Serializable {
 	public void setRole(String role) {
 		this.role = role;
 	}
-
+    public static boolean createUser(EntityManager em, User user) {
+        try {
+            em.persist(user);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 	public List<Comment> getComments() {
 		return this.comments;
 	}

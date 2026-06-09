@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/createEvent.jsp=UTF-8
+encoding//src/main/webapp/createPoste.jsp=UTF-8
+encoding//src/main/webapp/events.jsp=UTF-8
+encoding//src/main/webapp/posts.jsp=UTF-8
+encoding//src/main/webapp/profile.jsp=UTF-8
 encoding/<project>=UTF-8
